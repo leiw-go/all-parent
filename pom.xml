@@ -8,6 +8,12 @@
     <artifactId>several-environment-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.3</version>
+    </parent>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -15,14 +21,19 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.11</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>ch.qos.logback</groupId>-->
+<!--                    <artifactId>logback-classic</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.2.11</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-reload4j</artifactId>
+            <version>1.7.36</version>
         </dependency>
     </dependencies>
 
