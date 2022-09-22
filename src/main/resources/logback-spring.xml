@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="1 seconds">
 
     <contextName>logback</contextName>
-    <property name="log.path" value="/Users/leiw/Documents/xxl-job-log/xxl-job-admin.log"/>
+<!--    <property name="log.path" value="/Users/leiw/Documents/xxl-job-log/xxl-job-admin.log"/>-->
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
