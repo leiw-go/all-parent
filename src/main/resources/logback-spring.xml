@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
 
-    <contextName>logback</contextName>
-    <property name="log.path" value="/Users/leiw/Documents/xxl-job-log/TestLog"/>
-
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%-50.50logger) : %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.path}/%d{yyyy-MM-dd-HH}.log</fileNamePattern>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%date %level [%thread] %logger [%file : %line] %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%-40.40logger) : %msg%n</pattern>
         </encoder>
     </appender>
 
     <root level="info">
         <appender-ref ref="console"/>
-        <appender-ref ref="file"/>
     </root>
 
 </configuration>
