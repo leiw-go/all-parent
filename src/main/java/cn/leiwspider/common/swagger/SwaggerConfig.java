@@ -1,4 +1,4 @@
-package cn.leiwspider.swagger;
+package cn.leiwspider.common.swagger;
 
 
 import org.springframework.context.annotation.Bean;
@@ -13,14 +13,6 @@ import java.util.ArrayList;
 
 @Configuration
 public class SwaggerConfig {
-    @Bean
-    public Docket defaultDocket() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("defaultGroup")
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.leiwspider.controller")) // 设置扫描路径
-                .build();
-    }
 
     @Bean
     public Docket TestDocket() {
@@ -29,7 +21,6 @@ public class SwaggerConfig {
                 .apiInfo(testApiInfo())
                 //选择接口
                 .select()
-                //选择接口
                 .apis(RequestHandlerSelectors.basePackage("cn.leiwspider.controller"))
                 //build()一般表示工厂设计模式
                 .build();
