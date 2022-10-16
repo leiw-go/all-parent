@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+
+
 /**
  * 全局异常处理
  */
@@ -37,7 +39,7 @@ public class GlobalExceptionHandler {
             List<ObjectError> errors = bindingResult.getAllErrors();
             for (ObjectError objectError : errors) {
                 FieldError fieldError = (FieldError) objectError;
-                log.error("Data check failure --> object: {}; field: {}; errorMessage: {}",
+                log.error("Data check --> object: {}; field: {}; errorMessage: {}",
                         fieldError.getObjectName(), fieldError.getField(), fieldError.getDefaultMessage());
                 errorMsg.append(objectError.getDefaultMessage());
                 errorMsg.append(",");
@@ -57,6 +59,7 @@ public class GlobalExceptionHandler {
         log.error("发生空指针异常！请查找异常原因",exception);
         return Response.error(exception.getMessage());
     }
+
 
 
     /**
