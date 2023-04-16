@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.leiwspider.dao.mapper.HeaderMapper">
+
+    <resultMap id="BaseResultMap" type="cn.leiwspider.dao.domain.Header">
+            <result property="host" column="host" jdbcType="VARCHAR"/>
+            <result property="headName" column="head_name" jdbcType="VARCHAR"/>
+            <result property="headerValue" column="header_value" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        host,head_name,header_value
+    </sql>
+</mapper>

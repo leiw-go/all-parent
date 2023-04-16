@@ -1,0 +1,12 @@
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/CookieService.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/dao/mapper/HeaderMapper.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/dao/mapper/CookieMapper.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/dao/domain/Cookie.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/HeaderService.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/RequestClient.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/dao/domain/Header.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/impl/RequestClientImpl.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/Application.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/impl/HeaderServiceImpl.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/service/impl/CookieServiceImpl.java
+/Users/leiw/Documents/source-code/all-parent/lib-client/src/main/java/cn/leiwspider/controller/ClientController.java
