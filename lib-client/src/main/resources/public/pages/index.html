@@ -1,0 +1,122 @@
+<!--[if IE]>
+<script src="https://www.zhangxinxu.com/wordpress/2018/08/js-base64-atob-btoa-encode-decode/base64-polyfill.js"></script>
+<![endif]-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>我的活动详情</title>
+
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    https://wx1.pdlib.com
+    <link rel="stylesheet" href="https://wx1.pdlib.com/pudonglib-weixin/resources/css/mui.min.css"/>
+    <link rel="stylesheet" href="https://wx1.pdlib.com/pudonglib-weixin/resources/css/tools.css"/>
+    <link rel="stylesheet" href="https://wx1.pdlib.com/pudonglib-weixin/resources/css/air_ui.css"/>
+
+</head>
+<body>
+
+<style>
+    .mui-btn {
+        margin: 0 10px;
+    }
+    .fake-img {
+        background: rgb(139, 201, 200);
+        height: 160px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fake-img-text {
+        font-weight: 300;
+        font-family: "Songti SC";
+        font-size: 27px;
+        color: #080fef;
+    }
+    .date-month, .date-day {
+        font-family: Sans-serif;
+    }
+</style>
+<div class="screen">
+    <div class="layout_content_full">
+        <a href="https://wx1.pdlib.com/pudonglib-weixin/home?test=1">
+            <button type="button" class="title_bar"></button>
+        </a>
+        <div class="card_content">
+            <div class="card_div">
+                <div class="card_tip_div" style="width: 75%; margin: auto;text-align: left;">
+                    <!--<h4>恭喜您.预定成功</h4>-->
+                    <h4>预约<span class="date-pos2"></span>进馆</h4>
+                    <span style=" font-size: 0.8em; border: 1px solid #4cd964;color: #4cd964;">已报名</span>
+                    <p style="font-size: 0.8em;color: #888;display: inline;">完成活动将获得10积分</p>
+                </div>
+
+
+                <div class="card_activity_div" style="width:90%; margin: auto;text-align: left;">
+                    <div style="text-align: center">
+                        <img id="banner_img" class="banner_img" src="https://wx1.pdlib.com/img/activity/20221022/8d6c442ec1734cfb8f8de8b031dfe75e.jpg"/>
+                    </div>
+<!--                    <div class="fake-img">-->
+<!--                        <div class="fake-img-text">-->
+<!--                            预约<span class="date-month"></span>月<span class="date-day"></span>日进馆-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <h5>活动时间：<span class="date-pos"></span> 09:00:00</h5>
+
+                    <h5>活动地点：前程路88号</h5>
+
+                    <h5>证件号码：362321200002137819</h5>
+
+                    <h5>取消报名截止时间：<span class="date-pos"></span> 19:00:00</h5>
+                    <div type="button" style="margin-top: 16px" class="card_button">
+                        <a href="#">
+                            <img style="width:100%;"
+                                 src="https://wx1.pdlib.com/pudonglib-weixin/resources/img/card_bt3.png"/>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <img class="logo_bottom_img" style="position: relative;"
+                 src="https://wx1.pdlib.com/pudonglib-weixin/resources/img/logo_bottom.png"/>
+        </div>
+    </div>
+</div>
+<script>
+    setTimeout(function (){
+        var date = new Date();
+        var time = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        var time2 = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+        var time3 = `${date.getMonth() + 1}月${date.getDate()}日`
+        document.querySelectorAll(".date-pos").forEach(function (el) {
+            el.innerHTML = time;
+        })
+        document.querySelectorAll(".date-pos2").forEach(function (el) {
+            el.innerHTML = time2;
+        })
+        document.querySelectorAll(".date-pos3").forEach(function (el) {
+            el.innerHTML = time3;
+        })
+        document.querySelectorAll(".date-month").forEach(function (el) {
+            el.innerHTML = date.getMonth() + 1;
+        })
+        document.querySelectorAll(".date-day").forEach(function (el) {
+            el.innerHTML = date.getDate();
+        })
+        var $banner = document.querySelector("#banner_img");
+        fetch("/welcome").then(res => res.text()).then(src => {
+            console.log(src)
+            $banner.src = src
+        })
+
+    })
+</script>
+</body>
+</html>
