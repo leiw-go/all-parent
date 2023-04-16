@@ -13,8 +13,8 @@
     <dependencies>
         <dependency>
             <groupId>org.telegram</groupId>
-            <artifactId>Bots</artifactId>
-            <version>6.5.0 sp01</version>
+            <artifactId>telegrambots</artifactId>
+            <version>6.5.0</version>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
